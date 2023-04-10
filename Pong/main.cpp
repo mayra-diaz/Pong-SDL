@@ -1,14 +1,21 @@
 //
 //  main.cpp
-//  Pong
+//  Week12_Starter
 //
-//  Created by Mayra Díaz Tramontana on 10/04/23.
+//  Created by Kathleen Kelly on 3/29/23.
 //
 
 #include <iostream>
+#include "Game.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    Game game;
+    
+    bool bSuccess = game.Initialize();
+    if (bSuccess) {
+        game.RunLoop();
+    }
+    
+    game.Shutdown();
     return 0;
 }
